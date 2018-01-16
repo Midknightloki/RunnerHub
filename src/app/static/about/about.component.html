@@ -1,0 +1,31 @@
+<div class="content-wrapper md-padding" flex layout-column >
+<div class="background">
+
+<div class="row justify-content-around">
+<div  class="col-lg-8" [ngClass]="animateOnRouteEnter">
+<mat-card>
+	<mat-card-title>
+	AEd the Inf0mancer
+	</mat-card-title>
+</mat-card>
+</div>
+<div  class="col-lg-8" [ngClass]="animateOnRouteEnter">
+<mat-grid-list cols="18" rowHeight="50px">
+  <mat-grid-tile
+      *ngFor="let tile of tiles"
+      [colspan]="tile.cols"
+      [rowspan]="tile.rows"
+      [style.background]="tile.color">
+    {{tile.text}}
+  </mat-grid-tile>
+</mat-grid-list>
+</div>
+<div class="col-lg-4" [ngClass="animateOnRouteEnter">
+	
+    <mat-slider>
+    </mat-slider>
+	
+</div>]
+</div>
+</div>
+</div>

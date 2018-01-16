@@ -1,0 +1,38 @@
+@mixin matrix-components-theme{
+  .background {
+  padding: 100px 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: url('./assets/matrix.jpg') repeat;
+    background-size: cover;
+    opacity: 0.7;
+    content: '';
+    z-index: 0;
+  }
+    
+.gradient {
+    &::before {
+    position: absolute;
+    top: 90%;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    content: '';
+    z-index: 0;
+   }
+}
+}
+
+$matrix-primary: mat-palette($mat-grey, 900, 500, 900);
+$matrix-accent: mat-palette($mat-light-blue, A200);
+$matrix-warn: mat-palette($mat-amber, A200);
+    
+$matrix-theme: mat-dark-theme(
+  $matrix-primary,
+  $matrix-accent,
+  $matrix-warn
+);
+

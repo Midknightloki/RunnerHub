@@ -1,0 +1,37 @@
+@mixin pink-mohawk-components-theme{
+  .background {
+  padding: 100px 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: url('./assets/PinkMohawk.jpg') repeat;
+    background-size: cover;
+    opacity: 0.7;
+    content: '';
+    z-index: 0;
+  }
+    
+.gradient {
+    &::before {
+    position: absolute;
+    top: 90%;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    content: '';
+    z-index: 0;
+   }
+}
+}
+
+$pink-mohawk-primary: mat-palette($mat-pink, 900, 500, 900);
+$pink-mohawk-accent: mat-palette($mat-teal, A200);
+$pink-mohawk-warn: mat-palette($mat-yellow, A200);
+
+$pink-mohawk-theme: mat-dark-theme(
+  $pink-mohawk-primary,
+  $pink-mohawk-accent,
+  $pink-mohawk-warn
+);

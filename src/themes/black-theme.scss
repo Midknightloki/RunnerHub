@@ -1,0 +1,23 @@
+$anms-black-primary: mat-palette($mat-grey, 900, 500, 900);
+$anms-black-accent: mat-palette($mat-blue, A200);
+$anms-black-warn: mat-palette($mat-amber, A200);
+
+$anms-black-theme: mat-dark-theme(
+  $anms-black-primary,
+  $anms-black-accent,
+  $anms-black-warn
+);
+
+.background {
+  padding: 100px 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: url('./assets/matrix.jpg') no-repeat center top;
+    background-size: cover;
+    opacity: 0.7;
+    content: '';
+    z-index: 0;
+  }

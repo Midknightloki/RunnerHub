@@ -1,0 +1,37 @@
+@mixin black-trenchcoat-components-theme{
+  .background {
+  padding: 100px 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: url('./assets/BlackTrenchcoat.jpg') repeat;
+    background-size: cover;
+    opacity: 0.7;
+    content: '';
+    z-index: 0;
+  }
+    
+.gradient {
+    &::before {
+    position: absolute;
+    top: 90%;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    content: '';
+    z-index: 0;
+   }
+}
+}
+
+$black-trenchcoat-primary: mat-palette($mat-grey, 900, 500, 900);
+$black-trenchcoat-accent: mat-palette($mat-green, A200);
+$black-trenchcoat-warn: mat-palette($mat-yellow, A200);
+
+$black-trenchcoat-theme: mat-dark-theme(
+  $black-trenchcoat-primary,
+  $black-trenchcoat-accent,
+  $black-trenchcoat-warn
+);

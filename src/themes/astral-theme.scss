@@ -1,0 +1,37 @@
+@mixin astral-components-theme{
+  .background {
+  padding: 100px 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: url('./assets/astral.png') repeat;
+    background-size: cover;
+    opacity: 0.7;
+    content: '';
+    z-index: 0;
+  }
+    
+.gradient {
+    &::before {
+    position: absolute;
+    top: 90%;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    content: '';
+    z-index: 0;
+   }
+}
+}
+
+$astral-primary: mat-palette($mat-grey, 900, 500, 900);
+$astral-accent: mat-palette($mat-orange, A200);
+$astral-warn: mat-palette($mat-amber, A200);
+
+$astral-theme: mat-dark-theme(
+  $astral-primary,
+  $astral-accent,
+  $astral-warn
+);
